@@ -5,7 +5,10 @@
 <script>
   export default {
     mounted () {
-      alert('/pages/items/_itemId was mounted')
+      alert('/pages/items/' + this.$route.params.itemId + ' was mounted')
+    },
+    beforeDestroy () {
+      alert('/pages/items/' + this.$route.params.itemId + ' is about to be destroyed')
     }
   }
 </script>
